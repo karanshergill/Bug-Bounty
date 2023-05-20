@@ -8,6 +8,6 @@
 
 **Parse Masscan JSON Output**
 ```CSS
-▶ !%!jq -r '.[] | "\(.ip):\(.ports[0].port)"':write ip_port.txt
+▶ cat iprange-masscan.json | !%!jq -r '.[] | "\(.ip):\(.ports[0].port)"':write ip-ports.txt
 ```
 

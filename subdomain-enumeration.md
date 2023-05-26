@@ -1,7 +1,7 @@
 ### Passive Enumeration
   - Subfinder
 ```CSS
-subfinder -d <target.domain> -all -collect-sources -oJ <target.domain>.sub.json
+subfinder -d <target.domain> -all -collect-sources -oJ -o <target.domain>.sub.json
 ```
 
 ### Subdomain Resolution

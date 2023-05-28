@@ -11,7 +11,12 @@ jq -r '.host' <target.domain>.sub.json >> <target.domain>.subs.lst
 ```
 
 #### DNS Resolution
-  - DNSX - Wildcard Domains
+  - ShuffleDNS
+```CSS
+shuffledns -list <target.domain>.subs.lst -t 1000 -output <target.domain>.sdns.out
+```
+OR
+  - DNSX
 ```CSS
 dnsx -list <target.domain>.subs.lst -a -threads 25 -rate-limit 50 -retry 5 -resolver resolvers.txt -wildcard-domain target.domain -output <target.domain>.dnsx.out
 ```
@@ -19,6 +24,12 @@ dnsx -list <target.domain>.subs.lst -a -threads 25 -rate-limit 50 -retry 5 -reso
 ### Subdomain Resolution
   - HTTPX
 ```CSS
-httpx -list <target-subdomains>.subs.lst -status-code -ip -rate-limit 50 -delay 1ms -timeout 10 -resolvers resolvers.txt -json -output <target-subdomains>.httpx.json
+httpx -list <target-subdomains>.subs.lst -status-code -ip -rate-limit 50 -delay 1ms -timeout 10 -resolvers resolvers.txt -output <target-subdomains>.httpx.out
+```
+
+#### Extract Active Hosts [200]
+  - HTTPX to TXT
+```CSS
+cat <target-subdomains>.httpx.out | grep "\[200\]" | awk '{print $1}'
 ```
 

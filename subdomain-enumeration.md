@@ -10,6 +10,12 @@ subfinder -d <target.domain> -all -collect-sources -oJ -o <target.domain>.sub.js
 jq -r '.host' <target.domain>.sub.json >> <target.domain>.subs.lst
 ```
 
+#### Certificate Transparency
+  - TLSX - Exract CName and SAN
+```CSS
+tlsx -list <target.domain>.subs.lst -cn -san -json -output <target.domain>.subs.lst.json.tlsx
+```
+
 #### DNS Resolution
   - ShuffleDNS
 ```CSS

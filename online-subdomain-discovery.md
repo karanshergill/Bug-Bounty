@@ -17,5 +17,28 @@ cat rapiddns_data.csv | grep -i "cname" | awk -F ',' '{print $3}' | sed 's/\.$//
 cat rapiddns_data.csv | grep -i -v "cname" | awk -F ',' '{print $2}' >> a_records.data
 ```
 ```CSS
+cat cname_records.data a_records.data | sort -u >> hosts.txt
+```
 
+Script:
+```SHELL
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <csv_file>"
+  exit 1
+fi
+
+csv_file=$1
+
+grep -i "cname" "$csv_file" | awk -F ',' '{print $2}' > cname_records.data
+grep -i "cname" "$csv_file" | awk -F ',' '{print $3}' | sed 's/\.$//' >> cname_records.data 
+grep -i -v "cname" "$csv_file" | awk -F ',' '{print $2}' >> a_records.data
+cat cname_records.data a_records.data | sort -u >> hosts.txt
+
+echo "Extraction Complete!"
+```
+Usage:
+```SHELL
+./extractor.sh rapiddns_data.csv
 ```

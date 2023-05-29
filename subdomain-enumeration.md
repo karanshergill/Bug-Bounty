@@ -29,6 +29,7 @@ dnsx -list <target.domain>.subs.lst -a -threads 25 -rate-limit 50 -retry 5 -reso
 
 ### Subdomain Resolution
   - HTTPX
+  - Common HTTP and HTTPS ports: `http:80,81,3000,3001,8000,8080,9000,9090,https:443,3000,3001,8443,9443,10000`
 ```CSS
 httpx -list <target-subdomains>.subs.lst -status-code -ip -rate-limit 50 -delay 1ms -timeout 10 -resolvers resolvers.txt -output <target-subdomains>.httpx.out
 ```

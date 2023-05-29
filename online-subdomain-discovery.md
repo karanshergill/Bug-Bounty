@@ -8,11 +8,14 @@
 
 # Parse RapidDNS Data
 ```CSS
-cat rapiddns_data.csv | grep -i "cname" | awk -F ',' '{print $2}' > cname.data
+cat rapiddns_data.csv | grep -i "cname" | awk -F ',' '{print $2}' > cname_records.data
 ```
 ```CSS
-cat rapiddns_data.csv | grep -i "cname" | awk -F ',' '{print $3}' | sed 's/\.$//' >> cname.data 
+cat rapiddns_data.csv | grep -i "cname" | awk -F ',' '{print $3}' | sed 's/\.$//' >> cname_records.data 
 ```
 ```CSS
-cat rapiddns_data.csv | grep -i -v "cname" | awk -F ',' '{print $2}' >> a.data
+cat rapiddns_data.csv | grep -i -v "cname" | awk -F ',' '{print $2}' >> a_records.data
+```
+```CSS
+
 ```

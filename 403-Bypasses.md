@@ -1,6 +1,7 @@
 # 403 Forbidden Bypasses
 
   - Semicolon Bypass (;)
+
 Forbidden:
 ```CSS
 https://www.hackme.in/admin

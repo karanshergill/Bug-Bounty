@@ -38,7 +38,7 @@ hosts_file="${filename}_hosts.txt"
 grep -i "cname" "$csv_file" | awk -F ',' '{print $2}' > "$cname_records_file"
 grep -i "cname" "$csv_file" | awk -F ',' '{print $3}' | sed 's/\.$//' >> "$cname_records_file"
 grep -i -v "cname" "$csv_file" | awk -F ',' '{print $2}' >> "$a_records_file"
-cat cname_records.data a_records.data | sort -u >> "$hosts_file"
+cat "$cname_records_file" "$a_records_file" | sort -u >> "$hosts_file"
 
 echo "Extraction Complete!"
 ```

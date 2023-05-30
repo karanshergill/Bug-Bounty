@@ -7,6 +7,10 @@ amass enum -passive -d <target.domain> -json <target.domain>.amass.json
 ```CSS
 subfinder -d <target.domain> -all -collect-sources -oJ -o <target.domain>.sub.json
 ```
+  - GitHub Subdomains
+```CSS
+github-subdomains -d <target.domain> -o <target.domain>.sub.github.data -t <github-token>
+```
 
 #### Extract Subdomains from Amass Output
   - JSON to TXT

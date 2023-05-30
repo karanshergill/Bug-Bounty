@@ -9,14 +9,22 @@ subfinder -d <target.domain> -all -collect-sources -oJ -o <target.domain>.sub.js
 ```
 
 #### Extract Subdomains from Amass Output
+  - JSON to TXT
 ```CSS
 jq -r '.host' <target.domain>.sub.json >> <target.domain>.subs.data
 ```
+
 #### Extract Subdomains from Subfinder Output
   - JSON to TXT
 ```CSS
 jq -r '.host' <target.domain>.sub.json >> <target.domain>.subs.data
 ```
+
+#### DNS Resolution
+```CSS
+puredns resolve <target.domain>.subs.data --resolvers ../../resolvers.txt --rate-limit 500 --rate-limit-trusted 100 --write resolved_<target.domain>.subs.data
+```
+
 
 #### Certificate Transparency
   - TLSX - Exract CName and SAN

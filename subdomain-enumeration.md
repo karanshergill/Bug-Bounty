@@ -8,22 +8,26 @@ amass enum -passive -d <target.domain> -json <target.domain>.amass.json
 subfinder -d <target.domain> -all -collect-sources -oJ -o <target.domain>.sub.json
 ```
 
-#### Extract Subdomains
+#### Extract Subdomains from Amass Output
+```CSS
+jq -r '.host' <target.domain>.sub.json >> <target.domain>.subs.data
+```
+#### Extract Subdomains from Subfinder Output
   - JSON to TXT
 ```CSS
-jq -r '.host' <target.domain>.sub.json >> <target.domain>.subs.lst
+jq -r '.host' <target.domain>.sub.json >> <target.domain>.subs.data
 ```
 
 #### Certificate Transparency
   - TLSX - Exract CName and SAN
 ```CSS
-tlsx -list <target.domain>.subs.lst -cn -san -json -output <target.domain>.subs.lst.json.tlsx
+tlsx -list <target.domain>.subs.data -cn -san -json -output <target.domain>.subs.lst.json.tlsx
 ```
 
 #### DNS Resolution
   - ShuffleDNS
 ```CSS
-shuffledns -list <target.domain>.subs.lst -t 1000 -output <target.domain>.sdns.out
+shuffledns -list <target.domain>.subs.data -t 1000 -output <target.domain>.sdns.out
 ```
 OR
   - DNSX

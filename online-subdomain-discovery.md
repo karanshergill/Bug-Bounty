@@ -5,7 +5,7 @@
 - https://seckrd.com/subdomain-finder.php
 - https://rapiddns.io/subdomain
 - https://dnsdumpster.com/
-
+- https://suip.biz/?act=subfinder
 
 # Parse RapidDNS Data
 ```CSS

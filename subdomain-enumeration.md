@@ -5,7 +5,7 @@ amass enum -passive -d <target.domain> -json <target.domain>.amass.json
 ```
   - Subfinder
 ```CSS
-subfinder -d <target.domain> -all -collect-sources -oJ -o <target.domain>.sub.json
+subfinder -d <target.domain> -all -oJ -o <target.domain>.sub.json
 ```
   - GitHub Subdomains
 ```CSS

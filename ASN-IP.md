@@ -1,4 +1,5 @@
-Discovering IP Space
+## Discovering IP Space
+- Obtaining the ASN Number from [BGP](https://bgp.he.net/).
 
 
 

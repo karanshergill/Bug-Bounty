@@ -1,4 +1,5 @@
 **Discovering IP Space**
+- [AS Numbers](## AS Numbers)
 - Obtaining the ASN Number from [BGP](https://bgp.he.net/) for a target domain.
 - Find out the IP ranges that reside inside an ASN.
 - Reverse DNS lookup using PTR records.
@@ -7,6 +8,7 @@
 while read -r asn; do whois -h whois.radb.net -- "-i origin $asn" | grep -Eo "([0-9.]+){4}/[0-9]+"; done < asns.txt | tee ip-ranges.txt
 ```
 
+## AS Numbers
 
 **Full Port Scan**
 ```CSS

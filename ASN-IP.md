@@ -1,5 +1,5 @@
 **Discovering IP Space**
-- [AS Numbers](## AS Numbers)
+- [AS Numbers][## AS Numbers]
 - Obtaining the ASN Number from [BGP](https://bgp.he.net/) for a target domain.
 - Find out the IP ranges that reside inside an ASN.
 - Reverse DNS lookup using PTR records.

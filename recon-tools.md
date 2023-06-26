@@ -9,4 +9,6 @@
 2. [Certificate Transparency Logsaph)]()
 3. [Amass](https://github.com/owasp-amass/amass)
 4. [Subfinder](https://github.com/projectdiscovery/subfinder)
-5. 
+5. [Github-Subdomains]()
+6. [Gitlab-Subdomains]()
+7. 

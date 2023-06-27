@@ -12,3 +12,12 @@
 5. [Github-Subdomains](https://github.com/gwen001/github-subdomains)
 6. [Gitlab-Subdomains](https://github.com/gwen001/gitlab-subdomains)
 7. 
+
+## Passive Online Subdomain Enumeration
+- https://subdomainfinder.c99.nl/
+- http://api.subdomain.center/?domain=pwnstuff.com
+- https://seckrd.com/subdomain-finder.php
+- https://rapiddns.io/subdomain
+- https://dnsdumpster.com/
+- https://suip.biz/?act=subfinder
+- https://ui.ctsearch.entrust.com/ui/ctsearchui

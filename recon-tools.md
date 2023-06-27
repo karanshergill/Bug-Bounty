@@ -1,4 +1,4 @@
-# Reconnaissance Tools
+# DNS Reconnaissance Tools
   - Passive Subdomain Enumeration
   - Permutation Subdomain Enumeration
   - Active Subdomain Enumeration
@@ -21,3 +21,8 @@
 - https://dnsdumpster.com/
 - https://suip.biz/?act=subfinder
 - https://ui.ctsearch.entrust.com/ui/ctsearchui
+
+## Permutation Subdomain Enumeration
+
+1. [Ripgen](https://github.com/resyncgg/ripgen)
+

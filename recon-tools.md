@@ -1,5 +1,5 @@
 # Reconnaissance Tools
-  [(-)] Passive Subdomain Enumeration
+  [ ] Passive Subdomain Enumeration
   [-] Permutation Subdomain Enumeration
   [-] Active Subdomain Enumeration
 

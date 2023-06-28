@@ -25,6 +25,7 @@
 ## Permutation Subdomain Enumeration
 
 1. [Ripgen](https://github.com/resyncgg/ripgen)
+2. [Alterx](https://github.com/projectdiscovery/alterx)
 
 ## DNS Resolution
 1. [PureDNS](https://github.com/d3mondev/puredns)

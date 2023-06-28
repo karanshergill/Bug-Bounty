@@ -26,3 +26,6 @@
 
 1. [Ripgen](https://github.com/resyncgg/ripgen)
 
+## DNS Resolution
+1. [PureDNS](https://github.com/d3mondev/puredns) 
+

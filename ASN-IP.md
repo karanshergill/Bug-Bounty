@@ -13,6 +13,11 @@ Manual Method:
 while read -r asn; do whois -h whois.radb.net -- "-i origin $asn" | grep -Eo "([0-9.]+){4}/[0-9]+"; done < asns.txt | tee ip-ranges.txt
 ```
 
+DNSX:
+```Shell
+echo AS12345 | dnsx -silent -resp-only -ptr | tee -a asn-subdomains.lst
+```
+
 ## AS Numbers
 
 **Full Port Scan**

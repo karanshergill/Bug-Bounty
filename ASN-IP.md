@@ -5,8 +5,8 @@
 - Reverse DNS lookup using PTR records.
 
 ASNMap:
-```Bash
-$ asnmap -asn AS12345
+```Shell
+asnmap -asn AS12345
 ```
 Manual Method:
 ```Shell

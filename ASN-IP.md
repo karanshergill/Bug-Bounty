@@ -15,11 +15,11 @@ while read -r asn; do whois -h whois.radb.net -- "-i origin $asn" | grep -Eo "([
 
 DNSX:
 ```Shell
-echo AS12345  | dnsx -silent -resp-only -ptr | tee -a asn-subdomains.lst
+echo AS12345  | dnsx -silent -resp-only -ptr | tee -a asn-ptr-subdomains.lst
 ```
 
-```
-echo 127.0.0.1/16  | dnsx -silent -resp-only -ptr | tee -a ip-subdomains.lst
+```Shell
+echo 127.0.0.1/16  | dnsx -silent -resp-only -ptr | tee -a ip-ptr-subdomains.lst
 ```
 ## AS Numbers
 

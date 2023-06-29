@@ -4,6 +4,11 @@
 - Find out the IP ranges that reside inside an ASN.
 - Reverse DNS lookup using PTR records.
 
+ASNMap:
+```
+$ asnmap -asn AS12345
+```
+Manual Method:
 ```CSS
 while read -r asn; do whois -h whois.radb.net -- "-i origin $asn" | grep -Eo "([0-9.]+){4}/[0-9]+"; done < asns.txt | tee ip-ranges.txt
 ```

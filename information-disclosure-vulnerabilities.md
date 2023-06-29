@@ -9,6 +9,9 @@ Information disclosure, also known as information leakage, is when a website uni
   - Hard-coding API keys, IP addresses, database credentials, and so on in the source code
   - Hinting at the existence or absence of resources, usernames, and so on via subtle differences in application behavior
 
+---
+
+## Test Case I
 ### Error Messages
 - Testing URL query parameters for information disclosure.
 - Modify the data type of the query parameter value from an integer to a string value.
@@ -95,3 +98,11 @@ Internal Server Error: java.lang.NumberFormatException: For input string: "TEST"
 
 Apache Struts 2 2.3.31
 ```
+
+---
+
+## Test Case II
+### Error Messages
+- Testing URL query parameters for information disclosure.
+- Modify the data type of the query parameter value from an integer to a string value.
+- Version information disclosed in server response.

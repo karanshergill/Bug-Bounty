@@ -10,7 +10,8 @@ Information disclosure, also known as information leakage, is when a website uni
   - Hinting at the existence or absence of resources, usernames, and so on via subtle differences in application behavior
 
 ### Error Messages
-Testing Parameters for Infmation Disclosure.
+Testing parameters for infmation disclosure.
+Version information disclosed in server response.
 
 **Original Request**
 ```HTTP
@@ -32,5 +33,64 @@ Connection: close
 ```
 
 **Modified Request**
+```HTTP
+GET /product?productId=TEST HTTP/2
+Host: 0a23001803408c45805f80c10041009a.web-security-academy.net
+Cookie: session=9uTYTHDdqFqCe9H1u9mwziP4MnrUsE2n
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://0a23001803408c45805f80c10041009a.web-security-academy.net/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Te: trailers
+Connection: close
 ```
+
+**Server Response**
+```CSS
+HTTP/2 500 Internal Server Error
+Content-Length: 1677
+
+Internal Server Error: java.lang.NumberFormatException: For input string: "TEST"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at lab.v.k.v.g.B(Unknown Source)
+	at lab.s.n.n.l.q(Unknown Source)
+	at lab.s.n.c.x.z.u(Unknown Source)
+	at lab.s.n.c.t.lambda$handleSubRequest$0(Unknown Source)
+	at x.d.f.k.lambda$null$3(Unknown Source)
+	at x.d.f.k.j(Unknown Source)
+	at x.d.f.k.lambda$uncheckedFunction$4(Unknown Source)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at lab.s.n.c.t.w(Unknown Source)
+	at lab.server.o.z.p.Q(Unknown Source)
+	at lab.s.n.t.y(Unknown Source)
+	at lab.s.n.t.Q(Unknown Source)
+	at lab.server.o.z.u.r.z(Unknown Source)
+	at lab.server.o.z.u.s.lambda$handle$0(Unknown Source)
+	at lab.v.y.n.d.u(Unknown Source)
+	at lab.server.o.z.u.s.V(Unknown Source)
+	at lab.server.o.z.c.a(Unknown Source)
+	at x.d.f.k.lambda$null$3(Unknown Source)
+	at x.d.f.k.j(Unknown Source)
+	at x.d.f.k.lambda$uncheckedFunction$4(Unknown Source)
+	at lab.server.w.U(Unknown Source)
+	at lab.server.o.z.c.O(Unknown Source)
+	at lab.server.o.o.r.f(Unknown Source)
+	at lab.server.o.k.g(Unknown Source)
+	at lab.server.o.w.g(Unknown Source)
+	at lab.server.s2.J(Unknown Source)
+	at lab.server.s2.Z(Unknown Source)
+	at lab.q.i.lambda$consume$0(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+Apache Struts 2 2.3.31
 ```

@@ -10,8 +10,8 @@ Information disclosure, also known as information leakage, is when a website uni
   - Hinting at the existence or absence of resources, usernames, and so on via subtle differences in application behavior
 
 ### Error Messages
-Testing parameters for infmation disclosure.
-Version information disclosed in server response.
+- Testing URL parameters for infmation disclosure.
+- Version information disclosed in server response.
 
 **Original Request**
 ```HTTP

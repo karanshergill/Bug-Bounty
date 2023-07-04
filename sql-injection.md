@@ -1,5 +1,10 @@
 # SQL Injection Payloads
 
+**Retreive Hidden Data**
+```SQL
+'+OR+1=1--
+```
+---
 **Login bypass**
   - Modify the user or username parameter
 ```SQL

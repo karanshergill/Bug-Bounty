@@ -1,0 +1,2 @@
+common/config.php.new
+config.php.new

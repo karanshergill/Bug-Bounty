@@ -9,7 +9,7 @@
 -site:*.crunchbase.com
 -site:*.fitchratings.com
 -site:*.naukri.com
--site:*apple.com
+-site:*.apple.com
 -site:*.hackerone.com
 -site:*.stepstone.de
 -site:*.businesswire.com

@@ -3,3 +3,4 @@
 -site:*.ambitionbox.com 
 -site:*.youtube.com
 -site:*.linkedin.com
+-site:*.smartrecruiters.com

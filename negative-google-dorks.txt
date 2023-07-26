@@ -4,3 +4,8 @@
 -site:*.youtube.com
 -site:*.linkedin.com
 -site:*.smartrecruiters.com
+-site:*.indeed.com
+-site:*.crunchbase.com
+-site:*.fitchratings.com
+-site:*.naukri.com
+-site:*apple.com

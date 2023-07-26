@@ -14,4 +14,4 @@
 -site:*.stepstone.de
 -site:*.businesswire.com
 -site:*.marketscreener.com
--site:*forbes.com
+-site:*.forbes.com

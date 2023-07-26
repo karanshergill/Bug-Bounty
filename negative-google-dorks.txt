@@ -1,6 +1,7 @@
+Google Search limits queries to 32 words.
+
 -site:*.google.com
--site:*.glassdoor.co.in
--site:*.glassdoor.com
+-site:*.glassdoor*
 -site:*.ambitionbox.com 
 -site:*.youtube.com
 -site:*.linkedin.com

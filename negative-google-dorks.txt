@@ -10,4 +10,4 @@
 -site:*.naukri.com
 -site:*apple.com
 -site:*.hackerone.com
--site:hackeone.com
+-site:*.stepstone.de

@@ -1,0 +1,5 @@
+-site:*.google.com
+-site:*.glassdoor.co.in
+-site:*.ambitionbox.com 
+-site:*.youtube.com
+-site:*.linkedin.com

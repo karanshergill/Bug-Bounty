@@ -13,3 +13,4 @@
 -site:*.hackerone.com
 -site:*.stepstone.de
 -site:*.businesswire.com
+-site:*.marketscreener.com

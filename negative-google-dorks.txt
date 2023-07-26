@@ -9,3 +9,4 @@
 -site:*.fitchratings.com
 -site:*.naukri.com
 -site:*apple.com
+-site:*.hackerone.com

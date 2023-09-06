@@ -50,3 +50,13 @@ Bypassed (200 OK):
 https://domain.com/%2e/admin
 ```
 ---
+
+
+
+
+#### Tools:
+- https://github.com/lobuhi/byp4xx
+- https://github.com/iamj0ker/bypass-403
+- https://github.com/gotr00t0day/forbiddenpass
+- https://github.com/yunemse48/403bypasser
+- https://github.com/Dheerajmadhukar/4-ZERO-3

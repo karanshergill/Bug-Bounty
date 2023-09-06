@@ -60,3 +60,6 @@ https://domain.com/%2e/admin
 - https://github.com/gotr00t0day/forbiddenpass
 - https://github.com/yunemse48/403bypasser
 - https://github.com/Dheerajmadhukar/4-ZERO-3
+
+#### References:
+- https://kathan19.gitbook.io/howtohunt/status-code-bypass/403bypass

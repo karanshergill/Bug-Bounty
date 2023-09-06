@@ -33,7 +33,7 @@ Method:
   - GET => POST
 	- Content-Length: 0
 ```
-curl -X POST https://domain.com/admin -H "Content-Length: 0"
+curl -X POST https://hackme.in/admin -H "Content-Length: 0"
 ```
 ---
 ### Append Characters
@@ -43,11 +43,11 @@ Method:
 
 Blocked (403 Forbidden):
 ```
-https://domain.com/admin
+https://hackme.in/admin
 ```
 Bypassed (200 OK):
 ```
-https://domain.com/%2e/admin
+https://hackme.in/%2e/admin
 ```
 ---
 

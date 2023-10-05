@@ -1,16 +1,9 @@
 [Autonomous System Numbers](https://www.iana.org/assignments/as-numbers/as-numbers.xhtml)
 
-Search for ASN's belonging to an organization:
+### ASN's
+To search for AS Numbers belonging to an organization the below search engines can be used. I do this manually as automated tools often throw false positive results.
 - https://bgp.he.net/
 - https://asnlookup.com/
 - https://asrank.caida.org/
 
-Search for CIDR/IP Ranges belonging to an organization:
-- [SPK](https://github.com/dhn/spk)
-
-
-
-
-```shell
-root@kali# spk -silent -json -s "Organization Name" | tee cidrs.json | jq -r .cidr | tee cidrs.txt
-```
+### CIDR/IP Ranges 

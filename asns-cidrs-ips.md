@@ -7,3 +7,6 @@ Search for ASN's belonging to an organization:
 
 Search for CIDR/IP Ranges belonging to an organization:
 - [SPK](https://github.com/dhn/spk)
+```shell
+root@kali# spk -silent -json -s "Organization Name" | tee -a cidrs.txt
+```

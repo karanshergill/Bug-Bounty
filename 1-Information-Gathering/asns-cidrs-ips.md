@@ -6,6 +6,8 @@ Search for AS Numbers belonging to an organization the below search engines can 
 - https://asnlookup.com/
 - https://asrank.caida.org/
 
+---
+
 ### CIDR/IP Ranges 
 Find CIDR/IP Ranges associated with ASN's.
 - [ASNMap](https://github.com/projectdiscovery/asnmap)
@@ -19,10 +21,14 @@ List of AS Numbers:
 while IFS= read -r ASN; do asnmap -asn "$ASN" -resolvers ${RESOLVERS_TRUSTED}; done < asns.txt | tee -a cidrs.txt
 ```
 
+---
 
 ### IP's
 Expand the CIDR/IP Ranges to IP addresses.
 - [MapCIDR](https://github.com/projectdiscovery/mapcidr)
 ```
 mapcidr -cl target-ip-ranges.txt -skip-base -skip-broadcast -o target-ipv4-addresses.txt
+```
+
+---
 ```

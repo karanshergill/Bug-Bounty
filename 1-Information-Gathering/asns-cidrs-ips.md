@@ -6,6 +6,7 @@ Search for AS Numbers belonging to an organization the below search engines can 
 - https://asnlookup.com/
 - https://asrank.caida.org/
 
+Write to a text file.
 ```shell
 vim asns.txt
 ```

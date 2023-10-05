@@ -1,6 +1,6 @@
 [Autonomous System Numbers](https://www.iana.org/assignments/as-numbers/as-numbers.xhtml)
 
-### ASN's
+### I. ASN's
 Search for AS Numbers belonging to an organization the below search engines can be used. I do this manually as automated tools often throw false positive results.
 - https://bgp.he.net/
 - https://asnlookup.com/
@@ -8,7 +8,7 @@ Search for AS Numbers belonging to an organization the below search engines can 
 
 ---
 
-### CIDR/IP Ranges 
+### II. CIDR/IP Ranges 
 Find CIDR/IP Ranges associated with ASN's.
 - [ASNMap](https://github.com/projectdiscovery/asnmap)
 
@@ -23,7 +23,7 @@ while IFS= read -r ASN; do asnmap -asn "$ASN" -resolvers ${RESOLVERS_TRUSTED}; d
 
 ---
 
-### IP's
+### III. IP's
 Expand the CIDR/IP Ranges to IP addresses.
 - [MapCIDR](https://github.com/projectdiscovery/mapcidr)
 ```

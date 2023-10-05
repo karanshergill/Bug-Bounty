@@ -31,9 +31,15 @@ while IFS= read -r ASN; do asnmap -asn "$ASN" -resolvers ${RESOLVERS_TRUSTED}; d
 ### III. IP's
 Expand the CIDR/IP Ranges to IP addresses.
 - [MapCIDR](https://github.com/projectdiscovery/mapcidr)
+
+Single CIDR Range:
+```shell
+mapcidr -cidr 0.0.0.0/24 -skip-base -skip-broadcast | tee -a ips.txt
 ```
-mapcidr -cl target-ip-ranges.txt -skip-base -skip-broadcast -o target-ipv4-addresses.txt
+List of CIDR Ranges:
+```shell
+while IFS= read -r CIDR; do mapcidr -cidr "$CIDR" -skip-base -skip-broadcast; done < cidrs.txt | tee -a ips.txt
 ```
 
 ---
-```
+

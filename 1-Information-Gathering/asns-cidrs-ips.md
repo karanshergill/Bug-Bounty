@@ -12,11 +12,11 @@ Find CIDR/IP Ranges associated with ASN's.
 
 Single AS Number:
 ```shell
-asnmap -a ASXXXXX -r ${RESOLVERS_TRUSTED} -o target-ip-ranges.txt
+asnmap -asn ASXXXXX -resolvers ${RESOLVERS_TRUSTED} | tee -a cidr.txt
 ```
-List of AS Number:
+List of AS Numbers:
 ```shell
-
+while IFS= read -r ASN; do asnmap -asn "$ASN" -resolvers ${RESOLVERS_TRUSTED}; done < asns.txt | tee -a cidrs.txt
 ```
 
 

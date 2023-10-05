@@ -6,6 +6,10 @@ Search for AS Numbers belonging to an organization the below search engines can 
 - https://asnlookup.com/
 - https://asrank.caida.org/
 
+```shell
+vim asns.txt
+```
+
 ---
 
 ### II. CIDR/IP Ranges 

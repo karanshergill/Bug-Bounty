@@ -5,5 +5,5 @@ Search for ASN's belonging to an organization:
 - https://asnlookup.com/
 - https://asrank.caida.org/
 
-Search for CIDR's belonging to an organization:
+Search for IP Ranges/CIDR's belonging to an organization:
 - [SPK](https://github.com/dhn/spk)

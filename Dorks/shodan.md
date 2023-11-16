@@ -6,7 +6,7 @@
 - `ssl.cert.subject.CN:`"*.target.com" 200 `http.title:`"Admin"
 
 ### Search using hostname
-- `hostname:"*.target.com"
+- `hostname:"*.target.com"`
 
 ### Search using AS Number
 - `asn:31337`

@@ -7,3 +7,6 @@
 
 ### Search using AS Number
 - `asn:31337`
+
+### Others
+- `"set-cookie: webvpn;"` `org:pwnstuff`

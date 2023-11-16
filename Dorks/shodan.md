@@ -10,3 +10,6 @@
 
 ### Others
 - `"set-cookie: webvpn;"` `org:pwnstuff`
+- `"230 login successful"` `port:"21"`
+- `"vsftpd 2.3.4" "port:21"`
+- `230 'anonymous@' login ok`

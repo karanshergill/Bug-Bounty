@@ -14,12 +14,12 @@ I do this manually as automated tools often throw false positive results.
 CIDR/IP Ranges associated with ASN's.
 
 - Returns IPv4 and IPv6 prefixes
-```http
+```https
 curl -s "https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS12345" | jq '.data.prefixes[].prefix'
 ```
 
 - Returns only IPv4 prefixes
-```http
+```javascript
 curl -s "https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS31004" | jq -r '.data.prefixes[] | select(.prefix | contains(":") | not) | .prefix'
 ```
 
@@ -27,16 +27,8 @@ curl -s "https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS3100
 
 ### IP's
 Expand the CIDR/IP Ranges to IP addresses.
-- [MapCIDR](https://github.com/projectdiscovery/mapcidr)
 
-Single CIDR Range:
-```shell
-mapcidr -cidr 0.0.0.0/24 -skip-base -skip-broadcast | tee -a ips.txt
+```javascript
+cat cidrs.txt | xargs -n 1 prips > expanded_ips.txt
 ```
-List of CIDR Ranges:
-```shell
-while IFS= read -r CIDR; do mapcidr -cidr "$CIDR" -skip-base -skip-broadcast; done < cidrs.txt | tee -a ips.txt
-```
-
 ---
-

@@ -32,3 +32,10 @@ Expand the CIDR/IP Ranges to IP addresses.
 cat cidrs.txt | xargs -n 1 prips > expanded_ips.txt
 ```
 ---
+
+### Subdomains
+Do reverse DNS loopups to find domains and subdomains belonging to a company from their IP addresses.
+
+```shell
+cat expanded_ips.txt | hakrevdns -R trusted_resolvers.txt -d | reverse_dns.txt
+```

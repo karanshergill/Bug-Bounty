@@ -9,8 +9,26 @@
 - Brute-Force
 - DNS Caching
 
-## Testing and Abusing Permissions
-- 
+## Examine HTTP response headers and body:
+- HTTP response headers contains any of the below headers.
+```javascript
+x-amz-bucket-region
+x-amz-request-id
+x-amz-id-2
+```
+
+- References and Links included in the body to load images etc.
+```javascript
+\.s3\.amazonaws\.com\/?
+```
+
+## Testing and Abusing Permissions:
+- Read Permission
+- Write Permission
+- Read Access Control Lists (ACP)
+- Write Access Control Lists (ACP)
+- Full Control
+
 
 
 ## Practice:
